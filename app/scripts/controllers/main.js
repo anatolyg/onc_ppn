@@ -10,27 +10,13 @@ angular.module('oncPpnApp')
       'Karma'
     ];
   })
-    .directive('plMoreInfo', [function () {
-        return {
-            link: function ($scope, $el) {
-                $el.find('[data-role=more-info]').on('click', function () {
-                    var $contents = $el.find('[data-role=more-info-contents]');
-                    $contents.toggle();
-                    $(this).children('[data-role=toggle]')
-                        .toggleClass('fa-chevron-circle-down', $contents.is(':visible'))
-                        .toggleClass('fa-chevron-circle-right', !$contents.is(':visible'));
-                }).prepend('<i class="fa-chevron-circle-right" data-role="toggle"></i> ');
-            }
-        };
-    }])
     .directive('ppnCollapsedList', [function () {
         return {
             link: function ($scope, $el) {
                 // loop through each list-group-item, hide the list-group-item-text and add an event handler to the
                 //  list-group-item-heading to collapse/show it.
-                $el.find('.list-group-item-text').hide();
                 $el.find('.list-group-item').each(function (i, el) {
-                    $(el).find('.list-group-item-heading').append(' <i class="fa-question-circle"></i> ');
+                    $(el).find('.list-group-item-heading:not([no-content])').append(' <i class="fa-question-circle" data-role="more-info"></i> ');
                 }).click(function () {
                     var $info = $(this),
                         $infoText = $info.find('.list-group-item-text');
@@ -40,6 +26,7 @@ angular.module('oncPpnApp')
         };
     }])
   .controller('PpnProviderEnglish', function ($scope) {
+        $scope.date = new Date();
         $scope.patientSigned = false;
         $scope.org = {
             name: 'Sun Radiology',

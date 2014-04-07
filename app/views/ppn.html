@@ -27,15 +27,12 @@
 
 <section data-role="section-body">
 
-<section data-role="item-links">
-    <ul>
-        <li>Your rights</li>
-        <li>Your Choices</li>
-        <li>Our Uses and Disclosures</li>
-        <li>Our Responsibilities</li>
-    </ul>
-</section>
-
+<ul class="main-nav hidden-print">
+    <li><a>Your Rights</a></li>
+    <li><a>Your Choices</a></li>
+    <li><a>Our Uses and Disclosures</a></li>
+    <li><a>Our Responsibilities</a></li>
+</ul>
 
 <article data-ng-show="org.ppn.introduction">
     <h2>{{ org.ppn.introduction.title }}</h2>
@@ -50,10 +47,9 @@
     <section data-role="contents">
         <header>
             <h2>When it comes to your health information, you have certain rights.</h2>
-            <h4>This section explains your rights and some of our responsibilities to help you.</h4>
+            <h4 class="lead">This section explains your rights and some of our responsibilities to help you.</h4>
         </header>
 
-        <a href=""><strong>Show all</strong></a>
         <ul class="list-group" data-ppn-collapsed-list>
             <li class="list-group-item">
                 <h5 class="list-group-item-heading">Get a copy of your paper or electronic medical record</h5>
@@ -152,103 +148,37 @@
     <section data-role="contents">
         <header>
             <h2>For certain health information, you can tell us your choices about what we share.</h2>
-            <h4>If you have a clear preference for how we share your information in the situations described below, talk
+            <h4 class="lead">If you have a clear preference for how we share your information in the situations described below, talk
                 to us. Tell us what you want us to do, and we will follow your instructions.</h4>
         </header>
 
-
         <ul class="list-group" data-ppn-collapsed-list>
             <li class="list-group-item">
-                <h5 class="list-group-item-heading">Tell family and friends about your condition</h5>
+                <h5 class="list-group-item-heading">In these cases, you have both the right and choice to tell us what to share.</h5>
                 <ul class="list-group-item-text">
-                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
-                        information we have about you. Ask us how to do this.
-                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
-                        request. We may charge a reasonable, cost-based fee.
+                    <li>Share information with your family, close friends, or others involved in your care</li>
+                    <li>Share information in a disaster relief situation</li>
+                    <li>Include your information in a hospital directory</li>
+                </ul>
+                <em class="list-group-item-text">If you are not able to tell us your preference, for example if you are unconscious, we may go ahead and share your information if we believe it is in your best interest. We may also share your information when needed to lessen a serious and imminent threat to health or safety.</em>
+            </li>
+
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">In these cases we never share your information unless you give us written permission.</h5>
+                <ul class="list-group-item-text">
+                    <li>Marketing purposes</li>
+                    <li>Sale of your information</li>
+                    <li>Most sharing of psychotherapy notes</li>
                 </ul>
             </li>
+
             <li class="list-group-item">
-                <h5 class="list-group-item-heading">Provide disaster relief</h5>
+                <h5 class="list-group-item-heading">In the case of fundraising</h5>
                 <ul class="list-group-item-text">
-                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
-                        information we have about you. Ask us how to do this.
-                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
-                        request. We may charge a reasonable, cost-based fee.
-                </ul>
-            </li>
-            <li class="list-group-item">
-                <h5 class="list-group-item-heading">Include you in a hospital directory</h5>
-                <ul class="list-group-item-text">
-                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
-                        information we have about you. Ask us how to do this.
-                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
-                        request. We may charge a reasonable, cost-based fee.
-                </ul>
-            </li>
-            <li class="list-group-item">
-                <h5 class="list-group-item-heading">Provide mental health care</h5>
-                <ul class="list-group-item-text">
-                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
-                        information we have about you. Ask us how to do this.
-                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
-                        request. We may charge a reasonable, cost-based fee.
-                </ul>
-            </li>
-            <li class="list-group-item">
-                <h5 class="list-group-item-heading">Market our services and sell your information</h5>
-                <ul class="list-group-item-text">
-                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
-                        information we have about you. Ask us how to do this.
-                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
-                        request. We may charge a reasonable, cost-based fee.
-                </ul>
-            </li>
-            <li class="list-group-item">
-                <h5 class="list-group-item-heading">Raise funds</h5>
-                <ul class="list-group-item-text">
-                    <li>We may contact you for fundraising efforts, but you can tell us not to contact you again.
+                    <li>We may contact you for fundraising efforts, but you can tell us not to contact you again.</li>
                 </ul>
             </li>
         </ul>
-
-        <a data-ng-click="showMoreInfo()" data-role="more-info">See more information on these choices and how to exercise
-            them</a>
-        <section data-role="more-info-contents">
-            <header>
-                <h3>For certain health information, you can tell us your choices about what we share.</h3>
-                <h4>If you have a clear preference for how we share your information in the situations described below, talk
-                    to us. Tell us what you want us to do, and we will follow your instructions.</h4>
-            </header>
-
-            <dl>
-                <dt>In these cases, you have both the right and choice to tell us to:</dt>
-                <dd>
-                    <ul>
-                        <li>Share information with your family, close friends, or others involved in your care
-                        <li>Share information in a disaster relief situation
-                        <li>Include your information in a hospital directory
-                    </ul>
-                </dd>
-                <dd>
-                    <em>If you are not able to tell us your preference, for example if you are unconscious, we may go ahead
-                        and share your information if we believe it is in your best interest. We may also share your
-                        information when needed to lessen a serious and imminent threat to health or safety.</em>
-                </dd>
-            </dl>
-
-            <dl>
-                <dt>In these cases we never share your information unless you give us written permission:</dt>
-                <dd>
-                    <ul>
-                        <li>Marketing purposes
-                        <li>Sale of your information
-                        <li>Most sharing of psychotherapy notes
-                    </ul>
-                </dd>
-            </dl>
-
-
-        </section>
     </section>
 </article>
 
@@ -256,176 +186,114 @@
 <article data-type="uses" data-pl-more-info>
     <header class="heading"><span>Our Uses and Disclosures</span></header>
     <section data-role="contents">
-        <h2>We may use and share your information as we:</h2>
-        <ul>
-            <li>Treat you
-            <li>Run our organization
-            <li>Bill for your services
-            <li>Help with public health and safety issues
-            <li>Do research
-            <li>Comply with the law
-            <li>Respond to organ and tissue donation requests
-            <li>Work with a medical examiner or funeral director
-            <li>Address workers’ compensation, law enforcement, and other government requests
-            <li>Respond to lawsuits and legal actions
+        <header>
+            <h2>How do we typically use or share your health information?</h2>
+            <h4 class="lead">We typically use or share your health information in the following ways.</h4>
+        </header>
+
+        <ul class="list-group" data-ppn-collapsed-list>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Treat you</h5>
+                <ul class="list-group-item-text">
+                    <li>We can use your health information and share it with other professionals who are treating you.</li>
+                </ul>
+                <p class="list-group-item-text"><em>Example: A doctor treating you for an injury asks another doctor about your overall health condition.</em></p>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Run our organization</h5>
+                <ul class="list-group-item-text">
+                    <li>We can use and share your health information to run our practice, improve your care, and contact you when necessary.</li>
+                </ul>
+                <p class="list-group-item-text"><em>Example: We use health information about you to manage your treatment and services. </em></p>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Bill for your services</h5>
+                <ul class="list-group-item-text">
+                    <li>We can use and share your health information to bill and get payment from health plans or other entities.</li>
+                </ul>
+                <p class="list-group-item-text"><em>Example: We give information about you to your health insurance plan so it will pay for your services. </em></p>
+            </li>
         </ul>
-        <a data-ng-click="showMoreInfo()" data-role="more-info">See more information on these uses and disclosures</a>
 
-        <section data-role="more-info-contents">
-            <header>
-                <h3>How do we typically use or share your health information?</h3>
-                <h4>We typically use or share your health information in the following ways.</h4>
-            </header>
-
-            <dl>
-                <dt>Treat you</dt>
-                <dd>
-                    <ul>
-                        <li>We can use your health information and share it with other professionals who are treating you.
-                        </li>
-                    </ul>
-                </dd>
-                <dd data-role="example">
-                    <span>Example:</span> A doctor treating you for an injury asks another doctor about your overall health
-                    condition.
-                </dd>
-            </dl>
-
-            <dl>
-                <dt>Run our organization</dt>
-                <dd>
-                    <ul>
-                        <li>We can use and share your health information to run our practice, improve your care, and contact
-                            you when necessary.
-                        </li>
-                    </ul>
-                </dd>
-                <dd data-role="example">
-                    <span>Example:</span> We use health information about you to manage your treatment and services.
-                </dd>
-            </dl>
-
-            <dl>
-                <dt>Bill for your services</dt>
-                <dd>
-                    <ul>
-                        <li>We can use and share your health information to bill and get payment from health plans or other
-                            entities.
-                        </li>
-                    </ul>
-                </dd>
-                <dd data-role="example">
-                    <span>Example:</span> We give information about you to your health insurance plan so it will pay for
-                    your services.
-                </dd>
-            </dl>
+        <header>
+            <h2>How else can we use or share your health information?</h2>
+            <h4 class="lead">We are allowed or required to share your information in other ways – usually in ways that contribute to
+                the public good, such as public health and research. We have to meet many conditions in the law before
+                we can share your information for these purposes. For more information see: <a href="http://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/index.html" target="_blank">HHS.GOV consumer home <i class="fa fa-external-link"></i></a>.</h4>
+        </header>
 
 
-            <header>
-                <h3>How else can we use or share your health information?</h3>
-                <h4>We are allowed or required to share your information in other ways – usually in ways that contribute to
-                    the public good, such as public health and research. We have to meet many conditions in the law before
-                    we can share your information for these purposes. For more information see: <a href="http://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/index.html" target="_blank">HHS.GOV consumer home <i class="fa fa-external-link"></i></a>.</h4>
-            </header>
+        <ul class="list-group" data-ppn-collapsed-list>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Help with public health and safety issues</h5>
+                <ul class="list-group-item-text">
+                    <li> We can share health information about you for certain situations such as:
+                        <ul>
+                            <li>Preventing disease
+                            <li>Helping with product recalls
+                            <li>Reporting adverse reactions to medications
+                            <li>Reporting suspected abuse, neglect, or domestic violence
+                            <li>Preventing or reducing a serious threat to anyone’s health or safety
+                        </ul>
+                    </li>
+                </ul>
+            </li>
 
-            <dl>
-                <dt>Help with public health and safety issues</dt>
-                <dd>
-                    <ul>
-                        <li> We can share health information about you for certain situations such as:
-                            <ul>
-                                <li>Preventing disease
-                                <li>Helping with product recalls
-                                <li>Reporting adverse reactions to medications
-                                <li>Reporting suspected abuse, neglect, or domestic violence
-                                <li>Preventing or reducing a serious threat to anyone’s health or safety
-                            </ul>
-                        </li>
-                    </ul>
-                </dd>
-                <dd data-role="example"></dd>
-            </dl>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Do research</h5>
+                <ul class="list-group-item-text">
+                    <li> We can use or share your information for health research
+                    </li>
+                </ul>
+            </li>
 
-            <dl>
-                <dt>Do research</dt>
-                <dd>
-                    <ul>
-                        <li>We can use or share your information for health research.</li>
-                    </ul>
-                </dd>
-                <dd data-role="example"></dd>
-            </dl>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Comply with the law</h5>
+                <ul class="list-group-item-text">
+                    <li> We will share information about you if state or federal laws require it, including with the Department of Health and Human Services if it wants to see that we’re complying with federal privacy law
+                    </li>
+                </ul>
+            </li>
 
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Respond to organ and tissue donation requests</h5>
+                <ul class="list-group-item-text">
+                    <li> We can share health information about you with organ procurement organizations.
+                    </li>
+                </ul>
+            </li>
 
-            <dl>
-                <dt>Comply with the law</dt>
-                <dd>
-                    <ul>
-                        <li>We will share information about you if state or federal laws require it, including with the
-                            Department of Health and Human Services if it wants to see that we’re complying with federal
-                            privacy law.
-                        </li>
-                    </ul>
-                </dd>
-                <dd data-role="example"></dd>
-            </dl>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Work with a medical examiner or funeral director</h5>
+                <ul class="list-group-item-text">
+                    <li> We can share health information with a coroner, medical examiner, or funeral director when an individual dies.
+                    </li>
+                </ul>
+            </li>
 
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Address workers’ compensation, law enforcement, and other government requests</h5>
+                <ul class="list-group-item-text">
+                    <li> We can use or share health information about you:
+                        <ul>
+                            <li>For workers’ compensation claims
+                            <li>For law enforcement purposes or with a law enforcement official
+                            <li>With health oversight agencies for activities authorized by law
+                            <li>For special government functions such as military, national security, and presidential
+                                protective services
+                        </ul>
+                    </li>
+                </ul>
+            </li>
 
-            <dl>
-                <dt>Respond to organ and tissue donation requests</dt>
-                <dd>
-                    <ul>
-                        <li>We can share health information about you with organ procurement organizations.</li>
-                    </ul>
-                </dd>
-                <dd data-role="example"></dd>
-            </dl>
-
-
-            <dl>
-                <dt>Work with a medical examiner or funeral director</dt>
-                <dd>
-                    <ul>
-                        <li>We can share health information with a coroner, medical examiner, or funeral director when an
-                            individual dies.
-                        </li>
-                    </ul>
-                </dd>
-                <dd data-role="example"></dd>
-            </dl>
-
-
-            <dl>
-                <dt>Address workers’ compensation, law enforcement, and other government requests</dt>
-                <dd>
-                    <ul>
-                        <li>We can use or share health information about you:
-                            <ul>
-                                <li>For workers’ compensation claims
-                                <li>For law enforcement purposes or with a law enforcement official
-                                <li>With health oversight agencies for activities authorized by law
-                                <li>For special government functions such as military, national security, and presidential
-                                    protective services
-                            </ul>
-                        </li>
-                    </ul>
-                </dd>
-                <dd data-role="example"></dd>
-            </dl>
-
-
-            <dl>
-                <dt>Respond to lawsuits and legal actions</dt>
-                <dd>
-                    <ul>
-                        <li>We can share health information about you in response to a court or administrative order, or in
-                            response to a subpoena.
-                        </li>
-                    </ul>
-                </dd>
-                <dd data-role="example"></dd>
-            </dl>
-        </section>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Respond to lawsuits and legal actions</h5>
+                <ul class="list-group-item-text">
+                    <li> We can share health information about you in response to a court or administrative order, or in response to a subpoena
+                    </li>
+                </ul>
+            </li>
+        </ul>
 
         <section data-ng-show="getSpecialNotes()">
             <h2>Special Notes</h2>
@@ -442,42 +310,45 @@
     </section>
 </article>
 
-<article data-role="em" data-type="responsibilities">
-    <header><span>Our Responsibilities</span></header>
-    <ul>
-        <li>We are required by law to maintain the privacy and security of your protected health information.
-        <li>We will let you know promptly if a breach occurs that may have compromised the privacy or security of your
-            information.
-        <li>We must follow the duties and privacy practices described in this notice and give you a copy of it.
-        <li>We will not use or share your information other than as described here unless you tell us we can in writing.
-            If you tell us we can, you may change your mind at any time. Let us know in writing if you change your mind.
-    </ul>
+<article data-type="responsibilities" data-pl-more-info>
+    <header class="heading"><span>Our Responsibilities</span></header>
+    <section data-role="contents">
 
-    <section class="container">
-        <section>
-            For more information see: <a
-                href="http://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html" target="_blank">HHS.GOV consumer notice<i
-                class="fa fa-external-link"></i></a>.
+        <ul class="list-group">
+            <li class="list-group-item">We are required by law to maintain the privacy and security of your protected health information.
+            <li class="list-group-item">We will let you know promptly if a breach occurs that may have compromised the privacy or security of your
+                information.
+            <li class="list-group-item">We must follow the duties and privacy practices described in this notice and give you a copy of it.
+            <li class="list-group-item">We will not use or share your information other than as described here unless you tell us we can in writing.
+                If you tell us we can, you may change your mind at any time. Let us know in writing if you change your mind.
+        </ul>
+
+        <section class="container">
+            <section>
+                For more information see: <a
+                    href="http://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/noticepp.html" target="_blank">HHS.GOV consumer notice<i
+                    class="fa fa-external-link"></i></a>.
+            </section>
+
+            <section>
+                <strong>Changes to the Terms of this Notice</strong>
+
+                <p>We can change the terms of this notice, and the changes will apply to all information we have about
+                    you.
+                    The new notice will be available upon request, in our office, and on our web site.</p>
+            </section>
+
+            <p>This notice is effective as of <strong>{{ org.ppn.effectiveDate | date:'MM/dd/yyyy hh:mma' }}</strong></p>
+
+            <p><strong>{{ org.ppn.applicability }}</strong></p>
+            <p><strong>{{ org.ppn.privacyOfficer }}</strong></p>
         </section>
-
-        <section>
-            <strong>Changes to the Terms of this Notice</strong>
-
-            <p>We can change the terms of this notice, and the changes will apply to all information we have about
-                you.
-                The new notice will be available upon request, in our office, and on our web site.</p>
-        </section>
-
-        <p>This notice is effective as of <strong>{{ org.ppn.effectiveDate | date:'MM/dd/yyyy hh:mma' }}</strong></p>
-
-        <p><strong>{{ org.ppn.applicability }}</strong></p>
-        <p><strong>{{ org.ppn.privacyOfficer }}</strong></p>
     </section>
 </article>
 </section>
 </section>
 
-<section data-role="agreement">
+<section data-role="agreement" class="hidden-print">
     <label>
         <input type="checkbox" data-ng-model="patientSigned"> {{ org.ppn.signOff }}
     </label>
@@ -486,7 +357,7 @@
 </section>
 
 <section class="visible-print">
-    Printed on {{ $date | date:'MM/dd/yyyy @ h:mma'}}
+    Printed on <span data-ng-bind="date | date:'MM/dd/yyyy @ h:mma'"></span>
 </section>
 
 </section>
