@@ -15,6 +15,7 @@
     cursor: pointer;
   }
 
+
   [data-role=agreement] {
     margin-bottom: 50px;
   }
@@ -71,13 +72,34 @@
         }
       }
     }
-    [data-role=section-body] {
 
+
+
+
+    [data-role=section-body] {
       ul.main-nav {
         .nav;
         .nav-pills;
+        .nav-justified;
         @media (max-width: @screen-xs-max) {
           .nav-stacked;
+        }
+
+        li {
+          border-bottom: 4px solid;
+        }
+
+        .link-rights {
+          border-color: @rights-color;
+        }
+        .link-choices {
+          border-color: @choices-color;
+        }
+        .link-uses {
+          border-color: @uses-color;
+        }
+        .link-responsibilities {
+          border-color: @responsibilities-color;
         }
       }
 
