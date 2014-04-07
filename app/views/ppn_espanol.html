@@ -1,0 +1,349 @@
+<section class="ppn">
+<header data-role="page-header">
+    <section data-role="company">
+        <h1>{{ org.name }}</h1>
+        <h2>{{ org.subtitle }}</h2>
+    </section>
+    <section data-role="contact">
+        <address>
+            {{ org.address.address1 }}<br>
+            {{ org.address.address2 }}<br>
+            {{ org.address.city }}, {{ org.address.state }} {{ org.address.zip }}<br/>
+            <abbr title="Phone">P:</abbr> {{ org.phone }}<br/>
+            <abbr title="Fax">F:</abbr> {{ org.fax }}
+        </address>
+    </section>
+</header>
+
+<section class="notice-body">
+<header data-role="section-header">
+    <h1><span>Su información.</span> <span>Sus derechos.</span> <span>Nuestras responsabilidades.</span></h1>
+    <section>
+        <p>Esta notificación describe cómo puede utilizarse y divulgarse su información médica, y cómo puede acceder usted a esta información.</p>
+        <strong>Revísela con cuidado.</strong>
+    </section>
+</header>
+
+<section data-role="section-body">
+
+<ul class="main-nav hidden-print">
+    <li class="link-rights"><a>Sus derechos</a></li>
+    <li class="link-choices"><a>Sus opciones</a></li>
+    <li class="link-uses"><a>Nuestros usos y divulgaciones</a></li>
+    <li class="link-responsibilities"><a>Nuestras responsabilidades</a></li>
+</ul>
+
+<article data-ng-show="org.ppn.introduction">
+    <h2>{{ org.ppn.introduction.title }}</h2>
+    <article>
+        {{ org.ppn.introduction.text }}
+    </article>
+</article>
+
+
+<article data-type="rights" data-pl-more-info>
+    <header class="heading"><span>Sus derechos</span></header>
+    <section data-role="contents">
+        <header>
+            <h2>Cuando se trata de su información médica, usted tiene ciertos derechos.</h2>
+            <h4 class="lead">Esta sección explica sus derechos y algunas de nuestras responsabilidades para ayudarlo.</h4>
+        </header>
+
+        <ul class="list-group" data-ppn-collapsed-list>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Obtener una copia en formato electrónico o en papel de su
+                    historial médico
+                </h5>
+                <ul class="list-group-item-text">
+                    <li>Puede solicitar que le muestren o le entreguen una copia en formato electrónico o en papel de su historial médico y otra información médica que tengamos de usted. Pregúntenos cómo hacerlo.
+                    <li>Le entregaremos una copia o un resumen de su información médica, generalmente dentro de 30 días de su solicitud. Podemos cobrar un cargo razonable en base al costo
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Solicitarnos que corrijamos su historial médico</h5>
+                <ul class="list-group-item-text">
+                    <li>Puede solicitarnos que corrijamos la información médica sobre usted que piensa
+                        que es incorrecta o está incompleta. Pregúntenos cómo hacerlo.
+                    <li>Podemos decir “no” a su solicitud, pero le daremos una razón por escrito dentro de 60 días.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Solicitar comunicaciones confidenciales</h5>
+                <ul class="list-group-item-text">
+                    <li>Puede solicitarnos que nos comuniquemos con usted de una manera específica
+                        (por ejemplo, por teléfono particular o laboral) o que enviemos la correspondencia
+                        a una dirección diferente.
+
+                    <li>Le diremos “sí” a todas las solicitudes razonables.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Solicitarnos que limitemos lo que utilizamos o compartimos</h5>
+                <ul class="list-group-item-text">
+                    <li>Puede solicitarnos que no utilicemos ni compartamos determinada información médica para el tratamiento, pago o para nuestras operaciones
+                        <ul>
+                            <li>No estamos obligados a aceptar su solicitud, y podemos decir “no” si esto afectara su atención.
+                        </ul>
+                    </li>
+                    <li>Si paga por un servicio o artículo de atención médica por cuenta propia en su totalidad, puede solicitarnos que no compartamos esa información con el propósito de pago o nuestras operaciones con su aseguradora médica
+                        <ul><li>Diremos “sí” a menos que una ley requiera que compartamos dicha información.</li></ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Recibir una lista de aquellos con quienes hemos compartido información</h5>
+                <ul class="list-group-item-text">
+                    <li>Puede solicitar una lista (informe) de las veces que hemos compartido su información médica durante los seis años previos a la fecha de su solicitud, con quién la hemos compartido y por qué.
+                    <li>Incluiremos todas las divulgaciones excepto aquellas sobre el tratamiento, pago y operaciones de atención médica, y otras divulgaciones determinadas (como cualquiera de las que usted nos haya solicitado hacer). Le proporcionaremos un informe gratis por año pero cobraremos un cargo razonable en base al costo si usted solicita otro dentro de los 12 meses.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Obtener una copia de esta notificación de privacidad</h5>
+                <p class="list-group-item-text">
+                    Puede solicitar una copia en papel de esta notificación en cualquier momento, incluso si acordó recibir la notificación de forma electrónica. Le proporcionaremos una copia en papel de inmediato.
+                </p>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Elegir a alguien para que actúe en su nombre</h5>
+                <ul class="list-group-item-text">
+                    <li>Si usted le ha otorgado a alguien la representación médica o si alguien es su tutor legal, aquella persona puede ejercer sus derechos y tomar decisiones sobre su información médica.
+                    <li>Nos aseguraremos de que la persona tenga esta autoridad y pueda actuar en su nombre antes de tomar cualquier medida.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Presentar una queja si considera que se violaron sus derechos</h5>
+                <ul class="list-group-item-text">
+                    <li>Si considera que hemos violado sus derechos, puede presentar una queja comunicándose con nosotros por medio de la información de la página 1.
+                    <li>Puede presentar una queja en la Oficina de Derechos Civiles del Departamento de
+                    Salud y Servicios Humanos enviando una carta a:
+                    <br/><br/>
+                        <address>
+                            200 Independence Avenue, S.W.<br/>
+                            Washington, D.C. 20201
+                        </address>
+                    llamando al  1-877-696-6775, o visitando
+                        <a href="http://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/factsheets_spanish.html" target="_blank">los últimos dos disponibles en español
+                            <i class="fa fa-external-link"></i></a>.
+                    </li>
+                    <li>No tomaremos represalias en su contra por la presentación de una queja.
+                </ul>
+            </li>
+        </ul>
+
+    </section>
+
+</article>
+
+
+<article data-type="choices" data-pl-more-info>
+    <header class="heading"><span>Sus opciones</span></header>
+    <section data-role="contents">
+        <header>
+            <h2>Para determinada información médica, puede decirnos sus decisiones sobre qué compartimos.</h2>
+            <h4 class="lead">Si tiene una preferencia clara de cómo compartimos su información en las situaciones descritas debajo, comuníquese con nosotros. Díganos qué quiere que hagamos, y seguiremos sus instrucciones.</h4>
+        </header>
+
+        <ul class="list-group" data-ppn-collapsed-list>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">En estos casos, tiene tanto el derecho como la opción de pedirnos que:</h5>
+                <ul class="list-group-item-text">
+                    <li>Compartamos información con su familia, amigos cercanos u otras personas involucradas en su atención.</li>
+                    <li>Compartamos información en una situación de alivio en caso de una catástrofe. </li>
+                    <li>Incluyamos su información en un directorio hospitalario.</li>
+                </ul>
+                <em class="list-group-item-text">Si no puede decirnos su preferencia, por ejemplo, si se encuentra inconsciente, podemos seguir adelante y compartir su información si creemos que es para beneficio propio. También podemos compartir su información cuando sea necesario para reducir una amenaza grave e inminente a la salud o seguridad.</em>
+            </li>
+
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">En estos casos, nunca compartiremos su información a menos que nos entregue un permiso por escrito:</h5>
+                <ul class="list-group-item-text">
+                    <li>Propósitos de mercadeo.</li>
+                    <li>Venta de su información.</li>
+                    <li>Venta de su información.</li>
+                </ul>
+            </li>
+
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">En el caso de recaudación de fondos</h5>
+                <ul class="list-group-item-text">
+                    <li>Podemos comunicarnos con usted por temas de recaudación, pero puede pedirnos que no lo volvamos a contactar.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</article>
+
+
+<article data-type="uses" data-pl-more-info>
+    <header class="heading"><span>Nuestros usos y divulgaciones</span></header>
+    <section data-role="contents">
+        <header>
+            <h2>Por lo general, ¿cómo utilizamos o compartimos su información médica?</h2>
+            <h4 class="lead">Por lo general, utilizamos o compartimos su información médica de las siguientes maneras.</h4>
+        </header>
+
+        <ul class="list-group" data-ppn-collapsed-list>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Tratamiento</h5>
+                <ul class="list-group-item-text">
+                    <li>Podemos utilizar su información médica y compartirla con otros profesionales que lo estén tratando.</li>
+                </ul>
+                <p class="list-group-item-text"><em>Ejemplo: Un médico que lo está tratando por una lesión le consulta a otro doctor sobre su estado de salud general.</em></p>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Dirigir nuestra organización</h5>
+                <ul class="list-group-item-text">
+                    <li>Podemos utilizar y divulgar su información para llevar a cabo nuestra práctica, mejorar su atención y comunicarnos con usted cuando sea necesario.</li>
+                </ul>
+                <p class="list-group-item-text"><em>Ejemplo: Utilizamos información médica sobre usted para administrar su tratamiento y servicios. </em></p>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Facturar por sus servicios</h5>
+                <ul class="list-group-item-text">
+                    <li>Podemos utilizar y compartir su información para facturar y obtener el pago de los planes de salud y otras entidades.</li>
+                </ul>
+                <p class="list-group-item-text"><em>Ejemplo: Entregamos información acerca de usted a su plan de seguro médico para que éste pague por sus servicios. </em></p>
+            </li>
+        </ul>
+
+        <header>
+            <h2>¿De qué otra manera podemos utilizar o compartir su información médica?</h2>
+            <h4 class="lead">Se nos permite o exige compartir su información de otras maneras (por lo general, de maneras
+                que contribuyan al bien público, como la salud pública e investigaciones médicas).
+                Tenemos que reunir muchas condiciones legales antes de poder compartir su información con dichos propósitos. Para más información, visite: <a href="http://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/factsheets_spanish.html" target="_blank">disponible en español <i class="fa fa-external-link"></i></a>.</h4>
+        </header>
+
+
+        <ul class="list-group" data-ppn-collapsed-list>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Ayudar con asuntos de salud pública y seguridad</h5>
+                <ul class="list-group-item-text">
+                    <li> Podemos compartir su información médica en determinadas situaciones, como:
+                        <ul>
+                            <li>Prevención de enfermedades.
+                            <li>Ayuda con el retiro de productos del mercado.
+                            <li>Informe de reacciones adversas a los medicamentos.
+                            <li>Informe de sospecha de abuso, negligencia o violencia doméstica.
+                            <li>Prevención o reducción de amenaza grave hacia la salud o seguridad de alguien.
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Realizar investigaciones médicas</h5>
+                <ul class="list-group-item-text">
+                    <li> Podemos utilizar o compartir su información para investigación de salud.
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Cumplir con la ley</h5>
+                <ul class="list-group-item-text">
+                    <li> Podemos compartir su información si las leyes federales o estatales lo requieren, incluyendo compartir la información con el Departamento de Salud y Servicios Humanos si éste quiere comprobar que cumplimos con la Ley de Privacidad Federal.
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Responder a las solicitudes de donación de órganos y tejidos </h5>
+                <ul class="list-group-item-text">
+                    <li> Podemos compartir su información médica con las organizaciones de procuración de órganos.
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Trabajar con un médico forense o director funerario</h5>
+                <ul class="list-group-item-text">
+                    <li> Podemos compartir información médica con un oficial de investigación forense, médico forense o director funerario cuando un individuo fallece.
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Tratar la compensación de trabajadores, el cumplimiento de la ley y otras solicitudes gubernamentales</h5>
+                <ul class="list-group-item-text">
+                    <li> Podemos utilizar o compartir su información médica:
+                        <ul>
+                            <li>En reclamos de compensación de trabajadores.
+                            <li>A los fines de cumplir con la ley o con un personal de las fuerzas de seguridad.
+                            <li>Con agencias de supervisión sanitaria para las actividades autorizadas por ley.
+                            <li>En el caso de funciones gubernamentales especiales, como los servicios de protección presidencial, seguridad nacional y servicios militares.
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Responder a demandas y acciones legales</h5>
+                <ul class="list-group-item-text">
+                    <li> Podemos compartir su información médica en respuesta a una orden administrativa o de un tribunal o en respuesta a una citación.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--section data-ng-show="getSpecialNotes()">
+            <h2>Special Notes</h2>
+        </section>
+
+        <section data-ng-show="getStateLaws()">
+            <h2>Applicable State and Other Laws</h2>
+        </section>
+
+        <section>
+            <h2>Electronic Access</h2>
+            {{ org.name }} provides electronic access to your health information via PatientPrivilege.
+        </section-->
+    </section>
+</article>
+
+<article data-type="responsibilities" data-pl-more-info>
+    <header class="heading"><span>Nuestras responsabilidades</span></header>
+    <section data-role="contents">
+
+        <ul class="list-group">
+            <li class="list-group-item">Estamos obligados por ley a mantener la privacidad y seguridad de su información médica protegida.
+            <li class="list-group-item">Le haremos saber de inmediato si ocurre un incumplimiento que pueda haber comprometido la privacidad o seguridad de su información.
+            <li class="list-group-item">Debemos seguir los deberes y prácticas de privacidad descritas en esta notificación y entregarle una copia de la misma.
+            <li class="list-group-item">No utilizaremos ni compartiremos su información de otra manera distinta a la aquí descrita, a menos que usted nos diga por escrito que podemos hacerlo. Si nos dice que podemos, puede cambiar de parecer en cualquier momento. Háganos saber por escrito si usted cambia de parecer.
+        </ul>
+
+        <section class="container">
+            <section>
+                Para mayor información, visite: <a
+                    href="http://www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/factsheets_spanish.html" target="_blank">disponible en español <i
+                    class="fa fa-external-link"></i></a>.
+            </section>
+
+            <section>
+                <strong>Cambios a los términos de esta notificación</strong>
+
+                <p>Podemos modificar los términos de esta notificación, y los cambios se aplicarán a toda la información que tenemos sobre usted. La nueva notificación estará disponible según se solicite, en nuestro oficina, y en nuestro sitio web.</p>
+            </section>
+
+            <p>Este aviso es efectivo a partir del <strong>{{ org.ppn.effectiveDate | date:'MM/dd/yyyy hh:mma' }}</strong></p>
+
+            <p><strong>{{ org.ppn.applicability }}</strong></p>
+            <p><strong>{{ org.ppn.privacyOfficer }}</strong></p>
+        </section>
+    </section>
+</article>
+</section>
+</section>
+
+<section data-role="agreement" class="hidden-print">
+    <label>
+        <input type="checkbox" data-ng-model="patientSigned"> Al marcar esta casilla y haciendo clic en el botón de abajo, usted está de acuerdo con los términos descritos anteriormente
+    </label>
+
+    <button class="hidden-print" data-ng-disabled="!patientSigned" data-role="sign-agreement">Estoy de acuerdo, continúe</button>
+</section>
+
+<section class="visible-print">
+    Impreso en  <span data-ng-bind="date | date:'MM/dd/yyyy @ h:mma'"></span>
+</section>
+
+</section>
