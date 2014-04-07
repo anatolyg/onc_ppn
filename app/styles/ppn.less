@@ -1,0 +1,225 @@
+@import "colors";
+
+@rights-color: @danger-color;
+@choices-color: @main-accent;
+@uses-color: @success-color;
+@responsibilities-color: @danger-color;
+
+.ppn {
+  h1:extend(.lead),
+  h2:extend(.lead) {
+
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  [data-role=agreement] {
+    margin-bottom: 50px;
+  }
+
+  [data-role=sign-agreement]:extend(.btn, .btn-success, .btn-lg, .btn-block) {
+    &[disabled] {
+      cursor: not-allowed;
+      color: red;
+      background-color: darkgray;
+    }
+  }
+
+  [data-role=page-header] {
+    border-bottom: 1px solid @left-navigation-separator-color;
+    .make-row(0);
+    [data-role=company] {
+      .make-xs-column(12);
+      .make-sm-column(8);
+    }
+    [data-role=contact] {
+      .make-xs-column(12);
+      .make-sm-column(4);
+    }
+  }
+  .notice-body {
+    padding-top: 10px;
+    [data-role=section-header] {
+      .make-row(0);
+      padding-bottom: 40px;
+      h1 {
+        padding-top: 0;
+        margin-top: 0;
+        .make-xs-column(12);
+        .make-sm-column(6);
+        span {
+          display: block;
+        }
+        font-size: 1.8em;
+      }
+      section {
+        .make-xs-column(12);
+        .make-sm-column(6);
+      }
+    }
+    [data-role=section-body] {
+
+      @media print {
+        * {
+          line-height: 16px!important;
+        }
+
+        h2,h3 {
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
+
+        dl {
+          margin-bottom: 0px;
+          padding-bottom: 10px;
+        }
+
+        ul {
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      article {
+        margin-bottom: 50px;
+        @media print {
+          & {
+            margin-bottom: 25px;
+          }
+        }
+        header {
+          span {
+            font-size: 1.6em;
+            color: white;
+            border-radius: 10px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            display: inline;
+            padding: 10px;
+            padding-bottom: 3px;
+            @media (max-width: @screen-xs-max) {
+              font-size: 1.2em;
+            }
+          }
+        }
+        section[data-role=contents] {
+          border: 1px solid;
+          padding: 10px;
+          border-radius: 10px;
+          border-top: 0;
+          z-index: 99;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+
+        h2 {
+          font-size: 1.4em;
+        }
+
+        i {
+          .fa;
+        }
+
+        [data-role=more-info-contents] {
+          padding: 10px 20px;
+          margin: 0 0 20px;
+          border-left: 5px solid #eee;
+          display: none;
+
+          @media print {
+            & {
+              display: block;
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+          }
+
+          header {
+            h3 {
+              font-size: 1.2em;
+            }
+            h4:extend(.lead) {
+              font-size: 1.1em;
+              margin-bottom: 5px;
+            }
+            margin-bottom: 15px;
+          }
+        }
+
+        &[data-type=rights] {
+          header {
+            span {
+              background-color: @rights-color;
+            }
+            border-bottom: 1px solid @rights-color;
+          }
+          i {
+            color: @rights-color;
+          }
+          section[data-role=contents] {
+            border-color: @rights-color;
+          }
+        }
+        &[data-type=choices] {
+          header {
+            span {
+              background-color: @choices-color;
+            }
+            border-bottom: 1px solid @choices-color;
+          }
+          i {
+            color: @choices-color;
+          }
+          section[data-role=contents] {
+            border-color: @choices-color;
+          }
+        }
+        &[data-type=uses] {
+          header {
+            span {
+              background-color: @uses-color;
+            }
+            border-bottom: 1px solid @uses-color;
+          }
+          i {
+            color: @uses-color;
+          }
+          section[data-role=contents] {
+            border-color: @uses-color;
+          }
+        }
+
+        dl {
+          dd {
+            &[data-role=example] {
+              margin-left: 20px;
+              span {
+                font-weight: bolder;
+              }
+            }
+          }
+        }
+
+        &[data-role=em] {
+          border: 1px solid @responsibilities-color;
+          border-radius: 5px;
+          background-color: lighten(@responsibilities-color, 40%);
+          header {
+            span {
+              color: @responsibilities-color;
+            }
+            padding-bottom: 10px;
+          }
+          section {
+            margin-top: 10px;
+          }
+          i {
+            color: @responsibilities-color;
+          }
+        }
+      }
+    }
+  }
+}

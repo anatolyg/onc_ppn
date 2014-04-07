@@ -8,6 +8,7 @@
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -17,7 +18,19 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
-
+      less: {
+          development: {
+              options: {
+                  compress: true,
+                  yuicompress: true,
+                  optimization: 2
+              },
+              files: {
+                  // target.css file: source.less file
+                  '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/styles/main.less'
+              }
+          }
+      },
     // Project settings
     yeoman: {
       // configurable paths
@@ -41,6 +54,10 @@ module.exports = function (grunt) {
       jsTest: {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
+      },
+      less: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+        tasks: ['less']
       },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
@@ -288,6 +305,12 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      less: {
+          expand: true,
+          cwd: '<%= yeoman.app %>/lessc',
+          dest: '.tmp/styles/',
+          src: '{,*/}*.css'
       }
     },
 
@@ -378,7 +401,9 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'ngmin',
+    'less',
     'copy:dist',
+    'copy:less',
     'cdnify',
     'cssmin',
     'uglify',
@@ -391,4 +416,8 @@ module.exports = function (grunt) {
     'newer:jshint',
     'build'
   ]);
+
+    grunt.registerTask('testLess', [
+        'less'
+    ]);
 };

@@ -13,6 +13,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/ppn/provider/english', {
+        templateUrl: 'views/ppn.html',
+        controller: 'PpnProviderEnglish'
+      })
       .otherwise({
         redirectTo: '/'
       });
