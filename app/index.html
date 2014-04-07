@@ -24,7 +24,25 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right hidden-print">
+                <li class="active"><a ng-href="#/">Home</a></li>
+            </ul>
+            <section class="visible-print pull-right">
+                Printed on <span data-ng-bind="date | date:'MM/dd/yyyy @ h:mma'"></span>
+            </section>
+            <h3 class="text-muted">Patient Privacy Notice</h3>
+        </div>
+
+        <div ng-view=""></div>
+
+        <div class="footer hidden-print">
+            <p>With <span class="glyphicon glyphicon-heart"></span> from the PatientPrivilege team, crafted in Portland, OR</p>
+        </div>
+    </div>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

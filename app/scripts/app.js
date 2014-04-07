@@ -21,7 +21,17 @@ angular
         templateUrl: 'views/ppn_espanol.html',
         controller: 'PpnProviderEnglish'
       })
+        .when('/ppn/healthplan/english', {
+            templateUrl: 'views/ppn_hp.html',
+            controller: 'PpnHcEnglish'
+        })
+        .when('/ppn/healthplan/spanish', {
+            templateUrl: 'views/ppn_hp_espanol.html',
+            controller: 'PpnHcEnglish'
+        })
       .otherwise({
         redirectTo: '/'
       });
+  }).run(function ($rootScope) {
+     $rootScope.date = new Date();
   });
