@@ -27,11 +27,11 @@
 
 <section data-role="section-body">
 
-<ul class="main-nav hidden-print">
-    <li class="link-rights"><a>Your Rights</a></li>
-    <li class="link-choices"><a>Your Choices</a></li>
-    <li class="link-uses"><a>Our Uses and Disclosures</a></li>
-    <li class="link-responsibilities"><a>Our Responsibilities</a></li>
+<ul class="main-nav hidden-print" data-ppn-anchor-links id="links-section">
+    <li class="link-rights"><a data-ng-click="goToSection('rights')">Your Rights</a></li>
+    <li class="link-choices"><a data-ng-click="goToSection('choices')">Your Choices</a></li>
+    <li class="link-uses"><a data-ng-click="goToSection('uses')">Our Uses and Disclosures</a></li>
+    <li class="link-responsibilities"><a data-ng-click="goToSection('responsibilities')">Our Responsibilities</a></li>
 </ul>
 
 <article data-ng-show="org.ppn.introduction">
@@ -42,7 +42,7 @@
 </article>
 
 
-<article data-type="rights" data-pl-more-info>
+<article data-type="rights" data-pl-more-info id="rights-section">
     <header class="heading"><span>Your Rights</span></header>
     <section data-role="contents">
         <header>
@@ -128,7 +128,7 @@
 </article>
 
 
-<article data-type="choices" data-pl-more-info>
+<article data-type="choices" data-pl-more-info id="choices-section">
     <header class="heading"><span>Your Choices</span></header>
     <section data-role="contents">
         <header>
@@ -158,7 +158,7 @@
 </article>
 
 
-<article data-type="uses" data-pl-more-info>
+<article data-type="uses" data-pl-more-info id="uses-section">
     <header class="heading"><span>Our Uses and Disclosures</span></header>
     <section data-role="contents">
         <header>
@@ -283,7 +283,7 @@
     </section>
 </article>
 
-<article data-type="responsibilities" data-pl-more-info>
+<article data-type="responsibilities" data-pl-more-info id="responsibilities-section">
     <header class="heading"><span>Our Responsibilities</span></header>
     <section data-role="contents">
 

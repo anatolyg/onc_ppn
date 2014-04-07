@@ -10,6 +10,13 @@ angular.module('oncPpnApp')
       'Karma'
     ];
   })
+    .directive('plMoreInfo', ['$compile', function ( $compile ) {
+        return {
+            link: function ($scope, $el) {
+                $el.find('header.heading').append( $compile ('<div class="pull-right" data-ppn-anchor-links><a data-ng-click="goToSection(\'links\')">Back to top</a></div>')($scope));
+            }
+        };
+    }])
     .directive('ppnCollapsedList', [function () {
         return {
             link: function ($scope, $el) {
@@ -22,6 +29,16 @@ angular.module('oncPpnApp')
                         $infoText = $info.find('.list-group-item-text');
                     $infoText.toggle();
                 });
+            }
+        };
+    }])
+    .directive('ppnAnchorLinks', ['$anchorScroll', '$location', function ($anchorScroll, $location) {
+        return {
+            link: function ($scope) {
+                $scope.goToSection = function (section) {
+                    $location.hash(section + '-section');
+                    $anchorScroll();
+                };
             }
         };
     }])
