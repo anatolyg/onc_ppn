@@ -14,6 +14,7 @@
         </address>
     </section>
 </header>
+
 <section class="notice-body">
 <header data-role="section-header">
     <h1><span>Your Information.</span> <span>Your Rights.</span> <span>Our Responsibilities.</span></h1>
@@ -26,6 +27,16 @@
 
 <section data-role="section-body">
 
+<section data-role="item-links">
+    <ul>
+        <li>Your rights</li>
+        <li>Your Choices</li>
+        <li>Our Uses and Disclosures</li>
+        <li>Our Responsibilities</li>
+    </ul>
+</section>
+
+
 <article data-ng-show="org.ppn.introduction">
     <h2>{{ org.ppn.introduction.title }}</h2>
     <article>
@@ -33,149 +44,173 @@
     </article>
 </article>
 
+
 <article data-type="rights" data-pl-more-info>
-    <header><span>Your Rights</span></header>
+    <header class="heading"><span>Your Rights</span></header>
     <section data-role="contents">
-        <h2>You have the right to:</h2>
-        <ul>
-            <li>Get a copy of your paper or electronic medical record
-            <li>Correct your paper or electronic medical record
-            <li>Request confidential communication
-            <li>Ask us to limit the information we share
-            <li>Get a list of those with whom we’ve shared your information
-            <li>Get a copy of this privacy notice
-            <li>Choose someone to act for you
-            <li>File a complaint if you believe your privacy rights have been violated
-        </ul>
-        <a data-ng-click="showMoreInfo()" data-role="more-info">See more information on these rights and how to exercise
-            them</a>
+        <header>
+            <h2>When it comes to your health information, you have certain rights.</h2>
+            <h4>This section explains your rights and some of our responsibilities to help you.</h4>
+        </header>
 
-        <section data-role="more-info-contents">
-            <header>
-                <h3>When it comes to your health information, you have certain rights.</h3>
-                <h4>This section explains your rights and some of our responsibilities to help you.</h4>
-            </header>
-
-            <dl>
-                <dt>Get an electronic or paper copy of your medical record</dt>
-                <dd>
-                    <ul>
-                        <li>You can ask to see or get an electronic or paper copy of your medical record and other health
-                            information we have about you. Ask us how to do this.
-                        <li>We will provide a copy or a summary of your health information, usually within 30 days of your
-                            request. We may charge a reasonable, cost-based fee.
-                    </ul>
-                </dd>
-            </dl>
-
-
-            <dl>
-                <dt>Ask us to correct your medical record</dt>
-                <dd>
-                    <ul>
-                        <li>You can ask us to correct health information about you that you think is incorrect or
-                            incomplete. Ask us how to do this.
-                        <li>We may say “no” to your request, but we’ll tell you why in writing within 60 days.
-                    </ul>
-                </dd>
-            </dl>
-
-            <dl>
-                <dt>Request confidential communications</dt>
-                <dd>
-                    <ul>
-                        <li>You can ask us to contact you in a specific way (for example, home or office phone) or to send
-                            mail to a different address.
-                        <li>We will say “yes” to all reasonable requests.
-                    </ul>
-                </dd>
-            </dl>
-
-            <dl>
-                <dt>Ask us to limit what we use or share</dt>
-                <dd>
-                    <ul>
-                        <li>You can ask us not to use or share certain health information for treatment, payment, or our
-                            operations. We are not required to agree to your request, and we may say “no” if it would affect
-                            your care.
-                        <li>If you pay for a service or health care item out-of-pocket in full, you can ask us not to share
-                            that information for the purpose of payment or our operations with your health insurer. We will
-                            say “yes” unless a law requires us to share that information.
-                    </ul>
-                </dd>
-            </dl>
-
-            <dl>
-                <dt>Get a list of those with whom we’ve shared information</dt>
-                <dd>
-                    <ul>
-                        <li>You can ask for a list (accounting) of the times we’ve shared your health information for six
-                            years prior to the date you ask, who we shared it with, and why.
-                        <li>We will include all the disclosures except for those about treatment, payment, and health care
-                            operations, and certain other disclosures (such as any you asked us to make). We’ll provide one
-                            accounting a year for free but will charge a reasonable, cost-based fee if you ask for another
-                            one within 12 months.
-                    </ul>
-                </dd>
-            </dl>
-
-            <dl>
-                <dt>Get a copy of this privacy notice</dt>
-                <dd>You can ask for a paper copy of this notice at any time, even if you have agreed to receive the notice
+        <a href=""><strong>Show all</strong></a>
+        <ul class="list-group" data-ppn-collapsed-list>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Get a copy of your paper or electronic medical record</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
+                        information we have about you. Ask us how to do this.
+                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
+                        request. We may charge a reasonable, cost-based fee.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Correct your paper or electronic medical record</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask us to correct health information about you that you think is incorrect or
+                        incomplete. Ask us how to do this.
+                    <li>We may say “no” to your request, but we’ll tell you why in writing within 60 days.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Request confidential communication</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask us to contact you in a specific way (for example, home or office phone) or to send
+                        mail to a different address.
+                    <li>We will say “yes” to all reasonable requests.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Ask us to limit the information we share</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask us not to use or share certain health information for treatment, payment, or our
+                        operations.
+                        <ul>
+                            <li>We are not required to agree to your request, and we may say “no” if it would affect your care.
+                        </ul>
+                    </li>
+                    <li>If you pay for a service or health care item out-of-pocket in full, you can ask us not to share
+                        that information for the purpose of payment or our operations with your health insurer.
+                        <ul><li>We will say “yes” unless a law requires us to share that information.</li></ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Get a list of those with whom we’ve shared your information</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask for a list (accounting) of the times we’ve shared your health information for six
+                        years prior to the date you ask, who we shared it with, and why.
+                    <li>We will include all the disclosures except for those about treatment, payment, and health care
+                        operations, and certain other disclosures (such as any you asked us to make). We’ll provide one
+                        accounting a year for free but will charge a reasonable, cost-based fee if you ask for another
+                        one within 12 months.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Get a copy of this privacy notice</h5>
+                <p class="list-group-item-text">
+                    You can ask for a paper copy of this notice at any time, even if you have agreed to receive the notice
                     electronically. We will provide you with a paper copy promptly.
-                </dd>
-            </dl>
+                </p>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Choose someone to act for you</h5>
+                <ul class="list-group-item-text">
+                    <li>If you have given someone medical power of attorney or if someone is your legal guardian, that
+                        person can exercise your rights and make choices about your health information.
+                    <li>We will make sure the person has this authority and can act for you before we take any action.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">File a complaint if you believe your privacy rights have been violated</h5>
+                <ul class="list-group-item-text">
+                    <li>You can complain if you feel we have violated your rights by contacting us using the information
+                        in this notice.
+                    <li>You can file a complaint with the U.S. Department of Health and Human Services Office for Civil
+                        Rights by sending a letter to
+                        <br/><br/>
+                        <address>
+                            200 Independence Avenue, S.W.<br/>
+                            Washington, D.C. 20201
+                        </address>
+                        by calling 1-877-696-6775, or visiting <a
+                                href="http://www.hhs.gov/ocr/privacy/hipaa/complaints/" target="_blank">HHS.GOV Complaints
+                            <i class="fa fa-external-link"></i></a>.
+                    </li>
+                    <li>We will not retaliate against you for filing a complaint.
+                </ul>
+            </li>
+        </ul>
 
-            <dl>
-                <dt>Choose someone to act for you</dt>
-                <dd>
-                    <ul>
-                        <li>If you have given someone medical power of attorney or if someone is your legal guardian, that
-                            person can exercise your rights and make choices about your health information.
-                        <li>We will make sure the person has this authority and can act for you before we take any action.
-                    </ul>
-                </dd>
-            </dl>
-
-            <dl>
-                <dt>File a complaint if you feel your rights are violated</dt>
-                <dd>
-                    <ul>
-                        <li>You can complain if you feel we have violated your rights by contacting us using the information
-                            on page 1.
-                        <li>You can file a complaint with the U.S. Department of Health and Human Services Office for Civil
-                            Rights by sending a letter to
-                            <br/><br/>
-                            <address>
-                                200 Independence Avenue, S.W.<br/>
-                                Washington, D.C. 20201
-                            </address>
-                            by calling 1-877-696-6775, or visiting <a
-                                    href="http://www.hhs.gov/ocr/privacy/hipaa/complaints/" target="_blank">HHS.GOV Complaints
-                                <i class="fa fa-external-link"></i></a>.
-                        </li>
-                        <li>We will not retaliate against you for filing a complaint.
-                    </ul>
-                </dd>
-            </dl>
-        </section>
     </section>
 
 </article>
 
 
 <article data-type="choices" data-pl-more-info>
-    <header><span>Your Choices</span></header>
+    <header class="heading"><span>Your Choices</span></header>
     <section data-role="contents">
-        <h2>You have some choices in the way that we use and share information as we:</h2>
-        <ul>
-            <li>Tell family and friends about your condition
-            <li>Provide disaster relief
-            <li>Include you in a hospital directory
-            <li>Provide mental health care
-            <li>Market our services and sell your information
-            <li>Raise funds
+        <header>
+            <h2>For certain health information, you can tell us your choices about what we share.</h2>
+            <h4>If you have a clear preference for how we share your information in the situations described below, talk
+                to us. Tell us what you want us to do, and we will follow your instructions.</h4>
+        </header>
+
+
+        <ul class="list-group" data-ppn-collapsed-list>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Tell family and friends about your condition</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
+                        information we have about you. Ask us how to do this.
+                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
+                        request. We may charge a reasonable, cost-based fee.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Provide disaster relief</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
+                        information we have about you. Ask us how to do this.
+                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
+                        request. We may charge a reasonable, cost-based fee.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Include you in a hospital directory</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
+                        information we have about you. Ask us how to do this.
+                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
+                        request. We may charge a reasonable, cost-based fee.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Provide mental health care</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
+                        information we have about you. Ask us how to do this.
+                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
+                        request. We may charge a reasonable, cost-based fee.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Market our services and sell your information</h5>
+                <ul class="list-group-item-text">
+                    <li>You can ask to see or get an electronic or paper copy of your medical record and other health
+                        information we have about you. Ask us how to do this.
+                    <li>We will provide a copy or a summary of your health information, usually within 30 days of your
+                        request. We may charge a reasonable, cost-based fee.
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <h5 class="list-group-item-heading">Raise funds</h5>
+                <ul class="list-group-item-text">
+                    <li>We may contact you for fundraising efforts, but you can tell us not to contact you again.
+                </ul>
+            </li>
         </ul>
+
         <a data-ng-click="showMoreInfo()" data-role="more-info">See more information on these choices and how to exercise
             them</a>
         <section data-role="more-info-contents">
@@ -212,21 +247,14 @@
                 </dd>
             </dl>
 
-            <dl>
-                <dt>In the case of fundraising:</dt>
-                <dd>
-                    <ul>
-                        <li>We may contact you for fundraising efforts, but you can tell us not to contact you again.
-                    </ul>
-                </dd>
-            </dl>
+
         </section>
     </section>
 </article>
 
 
 <article data-type="uses" data-pl-more-info>
-    <header><span>Our Uses and Disclosures</span></header>
+    <header class="heading"><span>Our Uses and Disclosures</span></header>
     <section data-role="contents">
         <h2>We may use and share your information as we:</h2>
         <ul>
