@@ -3,13 +3,7 @@
 'use strict';
 
 angular.module('oncPpnApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  })
+  .controller('MainCtrl', function () {})
     .directive('plMoreInfo', ['$compile', function ( $compile ) {
         return {
             link: function ($scope, $el) {
@@ -42,7 +36,7 @@ angular.module('oncPpnApp')
             }
         };
     }])
-  .controller('PpnProviderEnglish', function ($scope) {
+  .controller('PpnProviderEnglish', ['$scope', function ($scope) {
         $scope.date = new Date();
         $scope.patientSigned = false;
         $scope.org = {
@@ -86,8 +80,8 @@ angular.module('oncPpnApp')
                 window.alert('Thank you for signing this agreement.');
             }
         };
-  })
-    .controller('PpnHcEnglish', function ($scope) {
+  }])
+    .controller('PpnHcEnglish', ['$scope', function ($scope) {
         $scope.date = new Date();
         $scope.patientSigned = false;
         $scope.org = {
@@ -131,5 +125,5 @@ angular.module('oncPpnApp')
                 window.alert('Thank you for signing this agreement.');
             }
         };
-    });
+    }]);
 }());
