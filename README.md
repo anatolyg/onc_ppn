@@ -50,6 +50,10 @@ Go to `http://localhost:9000` in your browser to view it.
 ### Organization
 
 There are four main pages that have the content for the four patient privacy notices. These are located in the `app/views` folder. The four pages are currently driven by two controllers. One controller has content and contact info for both provider notices, while the second controller handles the health plan notices. You can make each have its own controller by remapping the routing in `app/scripts/app.js` to link the appropriate view to the new controller.
+
+### Testing
+
+Included with this application is a way to test responsive layouts in your browser. When the application is running, simply point 
    
 
 
