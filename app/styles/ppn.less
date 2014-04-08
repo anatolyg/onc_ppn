@@ -7,9 +7,7 @@
 
 .ppn {
   h1:extend(.lead),
-  h2:extend(.lead) {
-
-  }
+  h2:extend(.lead) {}
 
   a {
     cursor: pointer;
@@ -77,6 +75,12 @@
 
 
     [data-role=section-body] {
+      @media (min-width: @screen-sm-min) {
+        .lead {
+          font-size: 16px;
+        }
+      }
+
       ul.main-nav {
         .nav;
         .nav-pills;
