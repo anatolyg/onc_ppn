@@ -53,7 +53,7 @@ There are four main pages that have the content for the four patient privacy not
 
 ### Testing
 
-Included with this application is a way to test responsive layouts in your browser. When the application is running, simply point 
+Included with this application is a way to test responsive layouts in your browser. When the application is running, simply point your browser to `http://127.0.0.1/tester.html`. This view presents 4 different resolutions so you can fully vet your app's responsive capabilities.
    
 
 
