@@ -27,7 +27,7 @@ angular.module('oncPpnApp')
                 }).click(function () {
                     var $info = $(this),
                         $infoText = $info.find('.list-group-item-text');
-                    $infoText.toggle();
+                    $infoText.toggleClass('aural');
                 });
             }
         };

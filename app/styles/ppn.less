@@ -92,6 +92,7 @@
         li {
           border-bottom: 8px solid;
           .h4;
+          font-size: 25px;
         }
 
         .link-rights {
@@ -162,7 +163,15 @@
 
           [data-ppn-collapsed-list] {
             .list-group-item-text {
-              display: none;
+              position: absolute;
+              font-size: 0;
+              left: -1000px;
+            }
+
+            .list-group-item-text.aural {
+              position: inherit!important;
+              font-size: inherit!important;
+              left:inherit!important;
             }
 
             @media print {
