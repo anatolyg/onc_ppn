@@ -3,7 +3,7 @@
 
     angular
       .module('oncPpnApp', [
-        'ngRoute'
+        'ngRoute', 'ngSanitize'
       ])
       .config(['$routeProvider', function ($routeProvider) {
         $routeProvider

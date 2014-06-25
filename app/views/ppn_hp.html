@@ -321,7 +321,7 @@
 
 <section data-role="agreement" class="hidden-print">
     <label>
-        <input type="checkbox" data-ng-model="patientSigned"> {{ org.ppn.signOff }}
+        <input type="checkbox" data-ng-model="patientSigned"> <span data-ng-bind-html="org.ppn.signOff"></span>
     </label>
 
     <button class="hidden-print" data-ng-disabled="!patientSigned" data-role="sign-agreement" data-ng-click="signAgreement('english')">I agree, continue</button>
