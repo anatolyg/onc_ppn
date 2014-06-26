@@ -92,7 +92,10 @@ directory to anywhere on your server.
 
 To link to the PPN from your application, use the following URL scheme:
 
-/location_of_ppn_files/ppn/
+`/{{DIRECTORY WHERE FILES ARE STORED}}/ppn/provider/en` <-- Provider (English)
+`/{{DIRECTORY WHERE FILES ARE STORED}}/ppn/provider/es` <-- Provider (Spanish)
+`/{{DIRECTORY WHERE FILES ARE STORED}}/ppn/healthplan/en` <-- Health Plan (English)
+`/{{DIRECTORY WHERE FILES ARE STORED}}/ppn/healthplan/es` <-- Health Plan (English)
 
 ### Organization
 

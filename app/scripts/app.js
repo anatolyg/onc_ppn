@@ -11,19 +11,19 @@
             templateUrl: 'views/main.html',
             controller: 'MainCtrl'
           })
-          .when('/ppn/provider/english', {
+          .when('/ppn/provider/en', {
             templateUrl: 'views/ppn.html',
             controller: 'PpnProviderEnglish'
           })
-          .when('/ppn/provider/spanish', {
+          .when('/ppn/provider/es', {
             templateUrl: 'views/ppn_espanol.html',
             controller: 'PpnProviderSpanish'
           })
-            .when('/ppn/healthplan/english', {
+            .when('/ppn/healthplan/en', {
                 templateUrl: 'views/ppn_hp.html',
                 controller: 'PpnHcEnglish'
             })
-            .when('/ppn/healthplan/spanish', {
+            .when('/ppn/healthplan/es', {
                 templateUrl: 'views/ppn_hp_espanol.html',
                 controller: 'PpnHcSpanish'
             })
