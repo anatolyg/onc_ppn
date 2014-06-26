@@ -25,6 +25,9 @@ angular.module('oncPpnApp')
             privacyOfficer: 'HIPAA Compliance Dept., Phone: 123-555-1212, 13943 N. 11th Ave, Phoenix, AZ 85021',
             signOff: '<strong>By checking this box and clicking the button below, you acknowledge receipt of this notice.  To print this notice, click here <a href="http://www.hhs.gov/ocr/privacy/hipaa/npp_booklet_hc_provider.pdf">hardcopy</a>.  You may also contact our office to request a printed copy.</strong>'
         },
-        signAgreementAlert: 'Thank you for signign the agreement'
+        signAgreementAlert: 'Thank you for signign the agreement',
+        stateLaws: 'Put applicable state laws here',
+        specialNotes: 'Put any special notes here',
+        electronicAccess: 'Electronic access is provided by PatientPrivilege'
     };
   });

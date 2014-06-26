@@ -286,18 +286,20 @@
             </li>
         </ul>
 
-        <!--section data-ng-show="getSpecialNotes()">
+        <section data-ng-if="org.specialNotes">
             <h2>Special Notes</h2>
+            <p data-ng-bind="org.specialNotes"></p>
         </section>
 
-        <section data-ng-show="getStateLaws()">
+        <section data-ng-if="org.stateLaws">
             <h2>Applicable State and Other Laws</h2>
+            <p data-ng-bind="org.stateLaws"></p>
         </section>
 
-        <section>
+        <section data-ng-if="org.electronicAccess">
             <h2>Electronic Access</h2>
-            {{ org.name }} provides electronic access to your health information via PatientPrivilege.
-        </section-->
+            <p data-ng-bind="org.electronicAccess"></p>
+        </section>
     </section>
 </article>
 
