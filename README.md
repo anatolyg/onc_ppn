@@ -66,7 +66,6 @@ state laws and even notes and electronic access information. Additional content 
         electronicAccess: 'Electronic access is provided by PatientPrivilege'
     }
 
-
 ## Developer instructions
 
 This application uses a fairly standard Yeoman workflow. First, checkout the application using git, or download it directly from github
