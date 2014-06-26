@@ -17,7 +17,7 @@
           })
           .when('/ppn/provider/spanish', {
             templateUrl: 'views/ppn_espanol.html',
-            controller: 'PpnProviderEnglish'
+            controller: 'PpnProviderSpanish'
           })
             .when('/ppn/healthplan/english', {
                 templateUrl: 'views/ppn_hp.html',
@@ -25,7 +25,7 @@
             })
             .when('/ppn/healthplan/spanish', {
                 templateUrl: 'views/ppn_hp_espanol.html',
-                controller: 'PpnHcEnglish'
+                controller: 'PpnHcSpanish'
             })
           .otherwise({
             redirectTo: '/'

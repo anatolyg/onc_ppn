@@ -34,9 +34,9 @@
 </ul>
 
 <article data-ng-show="org.ppn.introduction">
-    <h2>{{ org.ppn.introduction.titleSpanish }}</h2>
+    <h2>{{ org.ppn.introduction.title}}</h2>
     <article>
-        {{ org.ppn.introduction.textSpanish }}
+        {{ org.ppn.introduction.text}}
     </article>
 </article>
 
@@ -339,7 +339,7 @@
         <input type="checkbox" data-ng-model="patientSigned"> Al marcar esta casilla y hacer clic en el botón de abajo, usted reconoce el recibo de esta notificación. Para imprimir este aviso, haga clic aquí <a href="http://www.hhs.gov/ocr/privacy/hipaa/npp-booklet-provider-spanish.pdf">hardcopy</a>. También puede comunicarse con nuestra oficina para solicitar una copia impresa. Estoy de acuerdo, continuar.
     </label>
 
-    <button class="hidden-print" data-ng-disabled="!patientSigned" data-role="sign-agreement" data-ng-click="signAgreement('spanish')">Estoy de acuerdo, continúe</button>
+    <button class="hidden-print" data-ng-disabled="!patientSigned" data-role="sign-agreement" data-ng-click="signAgreement()">Estoy de acuerdo, continúe</button>
 </section>
 
 <section class="visible-print">
