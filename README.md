@@ -95,7 +95,7 @@ To link to the PPN from your application, use the following URL scheme:
  * `/{{DIRECTORY WHERE FILES ARE STORED}}/ppn/provider/en` <-- Provider (English)
  * `/{{DIRECTORY WHERE FILES ARE STORED}}/ppn/provider/es` <-- Provider (Spanish)
  * `/{{DIRECTORY WHERE FILES ARE STORED}}/ppn/healthplan/en` <-- Health Plan (English)
- * `/{{DIRECTORY WHERE FILES ARE STORED}}/ppn/healthplan/es` <-- Health Plan (English)
+ * `/{{DIRECTORY WHERE FILES ARE STORED}}/ppn/healthplan/es` <-- Health Plan (Spanish)
 
 ### Organization
 
