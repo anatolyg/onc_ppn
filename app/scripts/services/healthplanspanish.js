@@ -3,6 +3,7 @@
 angular.module('oncPpnApp')
   .service('HealthplanSpanish', function HealthplanSpanish() {
     return {
+        logo: '/images/logo.png',
         name: 'Oracle Health Plan',
         subtitle: 'El líder en cobertura de salud inteligente',
         address: {

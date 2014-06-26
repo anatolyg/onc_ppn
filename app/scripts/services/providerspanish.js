@@ -3,6 +3,7 @@
 angular.module('oncPpnApp')
   .service('ProviderSpanish', function ProviderSpanish() {
     return {
+        logo: '/images/logo.png',
         name: 'Oracle Radiology',
         subtitle: 'El líder en imagenología molecular',
         address: {
